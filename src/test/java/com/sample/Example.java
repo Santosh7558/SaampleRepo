@@ -18,7 +18,7 @@ public void launchUrl() {
 options.addArguments("--headless");
 options.addArguments("--no-sandbox");
 options.addArguments("--disable-dev-shm-usage");
-ptions.addArguments("--disable-gpu");
+options.addArguments("--disable-gpu");
 options.addArguments("--remote-allow-origins=*");
 	WebDriver driver=new ChromeDriver(options);
 	driver.get("https://google.com/");
