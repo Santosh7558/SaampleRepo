@@ -11,19 +11,23 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class Example {
 @Test
 public void launchUrl() {
-	WebDriverManager.chromedriver().setup();
+//	WebDriverManager.chromedriver().setup();
 //	System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//driver//chromedriver.exe");
 //	System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
-	ChromeOptions options=new ChromeOptions();
+	// ChromeOptions options=new ChromeOptions();
 // options.addArguments("--headless");
 // options.addArguments("--no-sandbox");
 // options.addArguments("--disable-dev-shm-usage");
 // options.addArguments("--disable-gpu");
 // options.addArguments("--remote-allow-origins=*");
-	WebDriver driver=new ChromeDriver(options);
-	driver.get("https://google.com/");
-	driver.quit();
+	//WebDriver driver=new ChromeDriver(options);
+	//driver.get("https://google.com/");
+	//driver.quit();
+ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage", "--remote-allow-origins=*");
 
+        WebDriver driver = new ChromeDriver(options);
+        driver.get("https://www.google.com");
 }
 
 
